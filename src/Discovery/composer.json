@@ -1,0 +1,48 @@
+{
+    "name": "php-http/discovery",
+    "description": "Finds installed HTTPlug implementations and PSR-7 message factories",
+    "license": "MIT",
+    "keywords": ["http", "discovery", "client", "adapter", "message", "factory"],
+    "homepage": "http://httplug.io",
+    "authors": [
+        {
+            "name": "Eric GELOEN",
+            "email": "geloen.eric@gmail.com"
+        },
+        {
+            "name": "Márk Sági-Kazár",
+            "email": "mark.sagikazar@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "php-http/message-factory": "^1.0"
+    },
+    "require-dev": {
+        "zendframework/zend-diactoros": "^1.0",
+        "guzzlehttp/psr7": "^1.0",
+        "php-http/guzzle6-adapter": "^0.2",
+        "phpspec/phpspec": "^2.4@dev",
+        "henrikbjorn/phpspec-code-coverage" : "^1.0"
+    },
+    "suggest": {
+        "zendframework/zend-diactoros": "Used with Diactoros Factories",
+        "guzzlehttp/psr7": "Used with Guzzle PSR-7 Factories"
+    },
+    "autoload": {
+        "psr-4": {
+            "Http\\Discovery\\": ""
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpspec run",
+        "test-ci": "vendor/bin/phpspec run -c phpspec.yml.ci"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.4-dev"
+        }
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev"
+}

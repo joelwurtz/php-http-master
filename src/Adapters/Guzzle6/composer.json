@@ -1,0 +1,39 @@
+{
+    "name": "php-http/guzzle6-adapter",
+    "description": "Guzzle 6 HTTP Adapter",
+    "license": "MIT",
+    "keywords": ["guzzle", "http"],
+    "homepage": "http://httplug.io",
+    "authors": [
+        {
+            "name": "David de Boer",
+            "email": "david@ddeboer.nl"
+        },
+        {
+            "name": "Márk Sági-Kazár",
+            "email": "mark.sagikazar@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "php-http/httplug": "1.0.0-alpha3",
+        "php-http/client-tools": "^0.1@dev",
+        "guzzlehttp/guzzle": "^6.0"
+    },
+    "provide": {
+        "php-http/client-implementation": "1.0",
+        "php-http/async-client-implementation": "1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Http\\Adapters\\Guzzle6\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev"
+}

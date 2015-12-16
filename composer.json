@@ -1,0 +1,42 @@
+{
+    "name": "php-http/development",
+    "description": "Development repository of php-http",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "http://httplug.io",
+    "authors": [
+        {
+            "name": "Joel Wurtz",
+            "email": "jwurtz@jolicode.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Http\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Http\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpspec run",
+        "test-ci": "vendor/bin/phpspec run -c phpspec.yml.ci"
+    },
+    "require": {
+        "psr/http-message": "^1.0",
+        "phpspec/phpspec": "^2.4",
+        "henrikbjorn/phpspec-code-coverage" : "^1.0",
+        "zendframework/zend-diactoros": "^1.0",
+        "guzzlehttp/psr7": "^1.0",
+        "guzzlehttp/guzzle": "^6.0"
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev"
+}
